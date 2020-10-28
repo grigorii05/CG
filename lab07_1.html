@@ -77,12 +77,8 @@
                 lo = i;
             } else continue;
 
-            console.log("high = ", hi, " low = ", lo);
-
             let k = (points[hi].y - points[lo].y) /
                 (points[hi].x - points[lo].x);
-
-            console.log("k = ", k);
 
             for (let j = points[lo].y; j < points[hi].y; ++j) {
                 if (typeof yarray[j] == "undefined") yarray[j] = [];
@@ -98,7 +94,6 @@
             for (let j = 0; j < xarray.length / 2; ++j) {
                 for (let k = xarray[j * 2]; k < xarray[j * 2 + 1]; k++) {
                     ctx.fillRect(k, y, 1, 1);
-                    // ctx.fillRect(Math.floor(k), Math.floor(y), 1, 1);
                 }
             }
         }
